@@ -3,29 +3,29 @@
 Este documento describe la configuración de una instancia del Colector OpenTelemetry (OTel).
 
 
-### Here are the steps to set up OpenTelemetry binary as an agent.
+### Aquí están los pasos para configurar el binario de OpenTelemetry como un agente:
 
-Download otel-collector tar.gz for your architecture
+Download otel-collector tar.gz para su arquitectura.
 
 ```
 wget https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.116.0/otelcol-contrib_0.116.0_linux_amd64.tar.gz
 ```
 
-Extract otel-collector tar.gz to the otelcol-contrib folder
+Extrae otel-collector tar.gz a la carpeta otelcol-contrib
 
 ```
 mkdir otelcol-contrib && tar xvzf otelcol-contrib_0.121.0_linux_amd64.tar.gz -C otelcol-contrib
 ```
 
-Create config.yaml in folder otelcol-contrib with the below content in it. Replace API_KEY with what is provided by newrelic:
+Crea el archivo config.yaml en la carpeta otelcol-contrib con el siguiente contenido. Reemplaza API_KEY con la clave proporcionada por New Relic.
 
-## Run in background
+## Ejecutar en segundo plano
 
 ```
 ./otelcol-contrib --config ./config.yaml &> otelcol-output.log & echo "$!" > otel-pid
 ```
 
-If you want to see the output of the logs you’ve just set up for the background process:
+Para ver la salida de los registros que has configurado para el proceso que se ejecuta en segundo plano:
 
 ```
 tail -f -n 50 otelcol-output.log
