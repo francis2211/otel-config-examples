@@ -31,6 +31,7 @@ Para ver la salida de los registros que has configurado para el proceso que se e
 tail -f -n 50 otelcol-output.log
 ```
 
+#### Descripcion del archivo confi_Linux.yaml
 
 ### `health_check`
 
